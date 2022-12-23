@@ -115,7 +115,7 @@ public class DominoSpawner : MonoBehaviour
     private void Spawn2(InputAction.CallbackContext ctx) => Spawn(2);
     private void Spawn3(InputAction.CallbackContext ctx) => Spawn(3);
 
-    private void Spawn(int prefabIndex)
+    public void Spawn(int prefabIndex)
     {
         if (!SpaceAvailable() || Time.timeScale < 1) return;
         if (dominosCounts.Count <= prefabIndex || dominosCounts[prefabIndex] <= 0) return;
